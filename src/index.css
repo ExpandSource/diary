@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
 
 body {
+  display: flex;
+  background-color: #fafafa;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   font-family: 'Gaegu', cursive;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background-color: white;
+  box-shadow: rgba(100, 100, 100, 0.2) 0px 7px 29px 0px;
 }

@@ -1,0 +1,26 @@
+.DiaryList {
+}
+
+.DiaryList .menu_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.DiaryList select {
+  border: none;
+  margin: 10px;
+  background-color: #eee;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Gaegu', cursive;
+}
+
+.DiaryList .menu_wrapper .right {
+  flex: 1;
+}
+
+.DiaryList .menu_wrapper .right button {
+  width: 100%;
+}
