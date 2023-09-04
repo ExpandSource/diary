@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from '../component/Button';
 import Header from '../component/Header';
 import DiaryList from '../component/DiaryList';
 import Editor from '../component/Editor';
+import { StateContext } from '../App';
 
 function Home() {
+  const data = useContext(StateContext);
   const [pivotDate, setPivotDate] = useState(new Date());
   const headerTitle = `${pivotDate.getFullYear()}년 ${
     pivotDate.getMonth() + 1
@@ -23,8 +25,8 @@ function Home() {
         left={<Button text={'<'} onClick={onDecreaseMonth} />}
         right={<Button text={'>'} onClick={onIncreaseMonth} />}
       />
-      <DiaryList data={[]} />
-      <Editor />
+      <DiaryList data={data} />
+      {/* <Editor /> */}
     </div>
   );
   /*

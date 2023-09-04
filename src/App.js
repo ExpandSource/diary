@@ -16,15 +16,16 @@ const mockData = [
   },
   {
     id: 2,
-    date: new Date().getTime(),
-    emotionId: 2,
+    date: new Date(2023, 9, 1).getTime(),
+    emotionId: 3,
     content: '안녕하세요 일기 mock data2',
   },
   {
-    id: 3,
-    date: new Date().getTime(),
-    emotionId: 3,
-    content: '안녕하세요 일기 mock3',
+    id: 5,
+    date: new Date(2023, 7, 1).getTime(),
+    emotionId: 5,
+    content:
+      '안녕하세요 일기 mock3 길이를 길게 했을 때......................................ㅇㅁㄹㄴㄹㅇㄴㄹㄴㅇㄻㄴㅇㄹㅇㄴㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄻㄴㅇㄹㅇㄴㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㅇㄴㅁㅇㄹㄴㄴㅇㄹㄴㄹㅇㅁㅇㄴㄻㄴㅇㄻㄴㅁㅇㄹㅁㄴㅁㅇㅁㄴㅇ ',
   },
 ];
 
