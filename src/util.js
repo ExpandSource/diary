@@ -4,6 +4,24 @@ import emotion3 from './img/emotion3.png';
 import emotion4 from './img/emotion4.png';
 import emotion5 from './img/emotion5.png';
 
+export const getMonthRangeByDate = (date) => {
+  const beginTimeStamp = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    1
+  ).getTime();
+  const endTimeStamp = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    1 - 1,
+    23,
+    59,
+    59,
+    999
+  ).getTime();
+  return { beginTimeStamp, endTimeStamp };
+};
+
 export const getFormatDate = (dateObj) => {
   // 날짜를 '0000-00-00'으로 포맷해주는 함수
   const year = dateObj.getFullYear();

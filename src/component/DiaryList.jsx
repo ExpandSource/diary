@@ -29,7 +29,6 @@ function DiaryList({ data }) {
     const sortedList = data.slice().sort(compare);
     // 정렬된 데이터를 설정
     setSortedData(sortedList);
-    console.log(sortedData);
   }, [data, sortType]);
 
   const handleOnChange = (event) => {
