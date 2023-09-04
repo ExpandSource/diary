@@ -4,6 +4,7 @@ import useDiary from '../hooks/useDiary';
 import Header from '../component/Header';
 import Button from '../component/Button';
 import { getFormatDate } from '../util';
+import Viewer from '../component/Viewer';
 
 function Diary() {
   // 1. 컴포넌트 마운트 : diary => undefined
@@ -22,7 +23,7 @@ function Diary() {
 
   // 2. useDiary 커스텀 훅 실행
   const diary = useDiary(id);
-  // 4. 컴포넌트 업데이트 : diary = { ... } 리렌더링
+  // 4. 컴포넌트 업데이트 : diary = { ... } => 리렌더링
 
   // 로딩 상태 설정
   if (!diary) {
@@ -38,8 +39,7 @@ function Diary() {
           left={<Button text='뒤로가기' onClick={goBack} />}
           right={<Button text='수정하기' onClick={goEdit} />}
         />
-        <div>{id}번 Diary</div>
-        <div>{diary.content}번 Diary</div>
+        <Viewer emotionId={emotionId} content={content} />
       </div>
     );
   }

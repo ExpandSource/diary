@@ -12,7 +12,8 @@ const mockData = [
     id: 1,
     date: new Date().getTime(),
     emotionId: 1,
-    content: '안녕하세요 일기',
+    content:
+      '안녕하세요 일기 안녕하세요 일기 안녕하세요 일기 안녕하세요 일기 안녕하세요 일기 안녕하세요 일기 안녕하세요 일기 안녕하세요 일기',
   },
   {
     id: 2,
