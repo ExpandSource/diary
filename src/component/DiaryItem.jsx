@@ -19,18 +19,21 @@ function DiaryItem({ id, emotionId, content, date }) {
 
   return (
     <div className='DiaryItem'>
+      {/* 감정 이미지 */}
       <section
         onClick={goDetail}
         className={['image_section', `image_section_${emotionId}`].join(' ')}
       >
         <img src={getEmotionImgById(emotionId)} alt={id} />
       </section>
+      {/* 일기 정보 */}
       <section onClick={goDetail} className='info_section'>
         <div className='date_wrapper'>
           {new Date(date).toLocaleDateString()}
         </div>
-        <div className='content_wrapper'>{content}</div>
+        <div className='content_wrapper'>{content.slice(0, 30)}</div>
       </section>
+      {/* 수정 버튼 */}
       <section className='button_section'>
         <Button text='수정하기' onClick={goEdit} />
       </section>
