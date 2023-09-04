@@ -30,7 +30,16 @@ const mockData = [
   },
 ];
 
-function reducer(state, action) {}
+function reducer(state, action) {
+  switch (action.type) {
+    case 'CREATE': {
+      return [action.data, ...state];
+    }
+    default: {
+      return state;
+    }
+  }
+}
 
 export const StateContext = React.createContext();
 export const DispatchContext = React.createContext();
@@ -39,9 +48,22 @@ function App() {
   const [data, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(4);
 
+  const onCreate = (date, emotionId, content) => {
+    dispatch({
+      type: 'CREATE',
+      data: {
+        id: idRef.current,
+        date: new Date(date).getTime(),
+        emotionId,
+        content,
+      },
+    });
+    idRef.current += 1;
+  };
+
   return (
     <StateContext.Provider value={data}>
-      <DispatchContext.Provider value={{}}>
+      <DispatchContext.Provider value={{ onCreate }}>
         <div className='App'>
           <Routes>
             <Route path='/' element={<Home />} />
